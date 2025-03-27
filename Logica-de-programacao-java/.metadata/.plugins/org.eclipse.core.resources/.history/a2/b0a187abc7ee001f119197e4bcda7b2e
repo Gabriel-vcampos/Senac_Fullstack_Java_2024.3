@@ -1,0 +1,25 @@
+package aula03;
+
+import java.util.Scanner;
+
+public class Atividadeproposta {
+
+	public static void main(String[] args) {
+		System.out.print("----------- Bem-vindo ao sistema de Salário -----------");
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Digite o seu nome a seguir:");
+		String nome_usuario = scanner.nextLine();
+		int cpf_usuario = scanner.nextInt();
+		Float salario = scanner.nextFloat();
+		scanner.close();
+		
+		if(salario >= 2000) {
+			Float desconto = salario * (11/100);
+			
+		}
+		
+		
+
+	}
+
+}

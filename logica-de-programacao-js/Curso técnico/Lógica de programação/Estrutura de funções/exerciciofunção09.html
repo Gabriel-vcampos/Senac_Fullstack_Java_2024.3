@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*5. Faça um script que leia o nome e duas notas. Calcule a média. Informe se o aluno esta aprovado ou reprovado.*/
+
+        function media(){
+            let nome = prompt("Bem-vindo a escola Pedro II , Digite no campo abaixo o nome do aluno:");
+            let nota1 = parseFloat(prompt("Digite a seguir a nota do 1 bimestre aluno:"));
+            let nota2 = parseFloat(prompt("Digite a seguir a nota do 2 bimestre aluno:"));
+            let media = (nota1 + nota2)/2
+            if(media >= 7){
+                document.write("O aluno:" , nome , " com média de: " , media , " está Aprovado!");
+            } else {
+                document.write("O aluno:" , nome , " com média de: " , media , " está Reprovado!")
+            }
+        }
+        media();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

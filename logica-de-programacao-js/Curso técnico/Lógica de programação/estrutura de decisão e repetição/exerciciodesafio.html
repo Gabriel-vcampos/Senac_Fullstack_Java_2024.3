@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*Faça um algoritmo que informe para o cliente de uma 
+loja de pisos, quantos metros de pisos serão necessários 
+comprar para conseguir atender todo o ambiente.
+
+calcule a o valor cheio que será pago pelo usuário
+de acordo com a quantidade de metros quadrados e o valor do metro do piso
+
+Caso o cliente deseje prosseguir com a compra, é necessário que
+ele escolha a forma de pagamento:
+1. A vista em dinheiro, com 10% de desconto
+3. Cartão:
+    3.1 . Débito - 5% de desconto
+    3.2 . crédito a vista - acréscimo de 1%
+    3.3 - parcelado, acréscimo de 2%*/
+
+        var quantidade_de_metros , valor_do_metro , resposta ;
+        var comprimento , largura
+        let comprimento_largura_ou_metros_quadrados = confirm("Olá bem-vindo a fornecedora de pisos , Você tem a quantidade metros quadrados? 'Ok para confirmar ou 'cancelar' para informar largura e comprimento'")
+        if (comprimento_largura_ou_metros_quadrados = true)
+        comprimento = parseInt(prompt("Olá bem-vindo a fornecedora de pisos, por favor selecione no campo abaixo a quantidade de comrpimento:" ));
+        largura = parseInt(prompt("Agora , por favor selecione no campo abaixo a quantidade de largura:" ));
+        let valor_do_piso = parseInt(prompt("Agora informe o valor do metro do piso: "));
+        let valor_total = largura * comprimento * valor_do_piso;
+        resposta = confirm("O valor total foi exatamente:" + valor_total + "Deseja continuar? 'Ok' para prosseguir , 'cancelar'");
+        while(resposta){
+            let metodo_de_pagamento = parseInt(prompt("1 - pagamento com dinheiro \n 2 - pagamento com cartão de credito a vista \n3 - pagamento com cartão de crédito parcelado \n 4 - pagamento com cartão de débito \n"));
+                switch(metodo_de_pagamento){
+                case 1:
+                    let pagamento_dinheiro = valor - (valor * 10/100);
+                    alert("O pagamento a dinheiro fica com desconto de 10%:" , pagamento_dinheiro);
+                    break;
+
+                case 2:
+                    let pagamento_cartao_debito = valor - (valor * 5/100);
+                    document.write("O pagamento com cartão de credito fica com desconto de 5%:" , pagamento_cartao_debito);
+                    break;
+
+                case 3:
+                let quantidade_de_parcelas = parseInt(prompt("Digite a quantidade de parcelas:"));
+                let pagamento_parcelado = valor_total / quantidade_de_parcelas;
+                let pagamento_parcelado_com_juros = pagamento_parcelado * 2 / 100
+                document.write("O pagamento desse dinheiro parcelado fica com acréscimo de 2%: " , pagamento_parcelado_com_juros);
+
+                case 4:
+                let pagamento_credito_vista = valor + (valor * 1/100);
+                document.write("O pagamento com cartão de crédito a vista fica com acréscimo de 1%:" , pagamento_credito_vista);
+                break;
+
+                default:
+                document.write("Erro");
+                
+        }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

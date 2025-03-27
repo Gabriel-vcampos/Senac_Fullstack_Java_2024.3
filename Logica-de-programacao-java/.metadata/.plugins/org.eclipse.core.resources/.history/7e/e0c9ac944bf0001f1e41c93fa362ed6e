@@ -1,0 +1,13 @@
+package aula04;
+
+public class objetos_aluno {
+
+	private String nomeAluno;
+	private String cpfAluno;
+	private float mediaAluno;
+	
+	public objetos_aluno(String nomeAluno, String cpfAluno, float media Aluno) {
+	}
+	
+
+}

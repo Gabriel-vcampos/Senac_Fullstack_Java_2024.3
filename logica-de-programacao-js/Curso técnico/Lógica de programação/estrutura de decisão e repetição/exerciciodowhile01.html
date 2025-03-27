@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var nome,opcao
+        nota1 = 0 , nota2 = 0 , media = 0;
+
+        do{
+            nome = prompt("Digite seu nome: ");
+            nota1 = parseFloat(prompt("Digite a nota 1:"));
+            nota2 = parseFloat(prompt("Digite a nota 2:"));
+            media = (nota1 + nota2)/2
+            document.write(`Aluno - ${nome}<br> Nota 1: ${nota1} <br> Nota 2: ${nota2} <br>  Média : ${media} <br>`);
+            document.write(`--------------------------------------<br>`);
+            opcao = prompt("Deseja continuar? S ou N");
+        }while(opcao == "S");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

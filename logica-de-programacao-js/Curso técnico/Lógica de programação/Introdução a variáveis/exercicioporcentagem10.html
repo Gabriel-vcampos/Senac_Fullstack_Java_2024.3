@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*10. Faça um programa onde o usuário digitará o seu salário e o programa escreverá, na tela, o valor que será descontado de vale-
+transporte (6%), de INSS (no momento descontar 8%) e quanto sobrará de salário.*/
+        let salario = parseFloat(prompt("Bem-vindo, digite no campo abaixo, seu salário:"));
+        let calculo_porcentagem_vale_transporte = salario * (6/100);
+        let calculo_porcentagem_inss = salario * (8/100);
+        let calculo_porcentagem_total = calculo_porcentagem_vale_transporte + calculo_porcentagem_inss;
+        let calculo_perca_percentual = salario - calculo_porcentagem_total;
+        document.write("O seu salario foi descontado em alguns requisitos como o vale-transporte(6%) e do INSS(8%) , ou seja o seu salário descontado desses benefícios é: " , 
+        calculo_perca_percentual);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

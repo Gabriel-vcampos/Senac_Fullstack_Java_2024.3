@@ -1,0 +1,45 @@
+package aula04;
+
+public class Casa {
+	String rua;
+	String numero_da_casa;
+	String cor_da_casa;
+	
+	
+	public Casa(String rua, float numero_da_casa , String cor_da_casa) {
+		this.rua = rua;
+		this.numero_da_casa = numero_da_casa;
+		this.cor_da_casa = cor_da_casa;
+	}
+
+
+	public String getRua() {
+		return rua;
+	}
+
+
+	public void setRua(String rua) {
+		this.rua = rua;
+	}
+
+
+	public float getNumero_da_casa() {
+		return numero_da_casa;
+	}
+
+
+	public void setNumero_da_casa(float numero_da_casa) {
+		this.numero_da_casa = numero_da_casa;
+	}
+
+
+	public String getCor_da_casa() {
+		return cor_da_casa;
+	}
+
+
+	public void setCor_da_casa(String cor_da_casa) {
+		this.cor_da_casa = cor_da_casa;
+	}
+	
+}

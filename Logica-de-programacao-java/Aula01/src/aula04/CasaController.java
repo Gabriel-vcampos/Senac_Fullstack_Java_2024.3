@@ -1,0 +1,11 @@
+package aula04;
+
+public class CasaController {
+
+	public static void main(String[] args) {
+		Casa casa1 = new Casa("José maria" , "243" , "Amarela");
+		casa1.chamarCasa();
+		casa1.alterarendereco();
+	}
+
+}

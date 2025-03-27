@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let media = parseInt(prompt("Digite a seguir a média do aluno: "));
+        let frequencia = parseInt(prompt("Digite a seguir a frequência do aluno:"));
+        if((media >= 7) && (frequencia >= 75)){
+            document.write("O aluno está aprovado!");
+        } else if((media <= 7) && (frequencia >= 75)){
+            document.write("O aluno está reprovado apenas pela média da nota");
+        } else if ((media >= 7) && (frequencia < 75)){
+            document.write("O aluno está reprovado apenas pela frequencia");
+        } else {
+            document.write("O aluno está reprovado pela média da nota e frequência");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

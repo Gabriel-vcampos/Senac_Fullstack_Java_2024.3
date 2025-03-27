@@ -1,0 +1,18 @@
+package aula03;
+
+import java.util.Scanner;
+
+public class Atividadeproposta {
+
+	public static void main(String[] args) {
+		System.out.print("----------- Bem-vindo ao sistema de Salário -----------");
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Digite o seu nome a seguir:");
+		int nome_usuario = scanner.next();
+		int cpf_usuario = scanner.nextInt();
+		
+		
+
+	}
+
+}

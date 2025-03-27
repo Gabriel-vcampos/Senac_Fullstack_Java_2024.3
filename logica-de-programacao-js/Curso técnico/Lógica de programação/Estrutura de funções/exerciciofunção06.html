@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*2. Construir um programa no qual o usuário deverá digitar dois números e o programa 
+escreverá, na tela, qual dos dois números é o maior (utilizar o comando função).*/
+
+        function maior_ou_menor(){
+            let n1 = parseFloat(prompt("Digite um número: "));
+            let n2 = parseFloat(prompt("Digite a seguir outro número: "));
+            if(n1 > n2){
+                document.write("O número: " , n1 , " é maior que " , n2 , "!");
+            } else if (n1 < n2) {
+                document.write("O número: " , n1 , " é menor que " , n2 , "!");
+            } else {
+                document.write("O número: " , n1 , " é igual a " , n2 , "!");
+        }
+    }
+        maior_ou_menor();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    var eleitores = []; // Array para armazenar todos os eleitores
+
+while (true) {
+    let senha_abertura = prompt("Olá, seja bem-vindo à Urna! Digite a senha (ou 'sair' para encerrar):");
+    
+    if (senha_abertura.toLowerCase() === 'sair') {
+        break; // Encerra o loop se o usuário digitar 'sair'
+    }
+
+    if (senha_abertura.toLowerCase() === 'presidente') {
+        document.write("Acesso concedido! <br>");
+
+        let titulo = prompt("Digite o título de eleitor do candidato:");
+        let eleitor = {
+            titulo_de_eleitor: titulo,
+            prefeito_votado: null,
+            vereador_votado: null,
+        };
+
+        let votos_prefeito = parseInt(prompt("Realize o voto para prefeito: \n 11 - Prefeito Zé \n 12 - Prefeita Ana \n 0 - Branco \n Qualquer outro valor - Nulo"));
+        switch (votos_prefeito) {
+            case 11:
+                document.write("Voto realizado no candidato: Zé! <br>");
+                eleitor.prefeito_votado = 'Zé';
+                break;
+            case 12:
+                document.write("Voto realizado na candidata: Ana! <br>");
+                eleitor.prefeito_votado = 'Ana';
+                break;
+            case 0:
+                document.write("Voto realizado branco para prefeito <br>");
+                eleitor.prefeito_votado = 'Branco';
+                break;
+            default:
+                document.write("Voto realizado nulo para prefeito! <br>");
+                eleitor.prefeito_votado = 'Nulo';
+                break;
+        }
+
+        let votos_vereador = parseInt(prompt("Realize o voto para vereador: \n 22500 - Vereador Marcus \n 25525 - Paula \n 0 - Branco \n Qualquer outro valor - Nulo"));
+        switch (votos_vereador) {
+            case 22500:
+                
+                eleitor.vereador_votado = 'Marcus';
+                break;
+            case 25525:
+                
+                eleitor.vereador_votado = 'Paula';
+                break;
+            case 0:
+                
+                eleitor.vereador_votado = 'Branco';
+                break;
+            default:
+                
+                eleitor.vereador_votado = 'Nulo';
+                break;
+        }
+
+        // Armazenar o eleitor no array
+        eleitores.push(eleitor);
+
+        // Exibir todos os eleitores e seus votos
+        document.write("<h3>Eleitores e Votos:</h3>");
+        eleitores.forEach(e => {
+            document.write(`Título de Eleitor: ${e.titulo_de_eleitor}, Voto para Prefeito: ${e.prefeito_votado}, Voto para Vereador: ${e.vereador_votado} <br>`);
+        });
+
+    } else {
+        document.write("Acesso negado! <br>");
+    }
+}
+
+document.write("Processo encerrado. <br>");
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

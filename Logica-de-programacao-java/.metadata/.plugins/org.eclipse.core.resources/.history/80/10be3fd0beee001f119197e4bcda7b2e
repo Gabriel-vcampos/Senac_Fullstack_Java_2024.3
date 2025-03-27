@@ -1,0 +1,23 @@
+package aula03;
+
+import java.util.Scanner;
+
+public class numerospares {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Digite um número a seguir:");
+		int numero_usuario = scanner.nextInt();
+		int contador = 0;
+
+			if (contador % 2 == 0) {
+				while (contador <= numero_usuario) {
+				System.out.print(" " + contador);
+				contador++;
+				} else {
+					
+					}
+				}
+			}
+		}

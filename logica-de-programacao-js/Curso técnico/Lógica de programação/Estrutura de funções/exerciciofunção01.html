@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            function menu(){
+                let sexo = parseInt(prompt("Informe o sexo: \n 1- Homem \n 2-Mulher \n 3- Não definido \n 4- Outro"));
+            switch(sexo){
+                case 1:
+                    document.write("Opção escolhida foi sexo: masculino!");
+                    break;
+
+                case 2:
+                    document.write("Opção escolhida foi sexo: feminino!");
+                    break;
+
+                case 3:
+                document.write("Opção escolhida foi sexo: Não definido!");
+                    break;
+
+                case 4:
+                document.write("Opção escolhida foi sexo: Outro");
+                break;
+
+                default:
+                document.write("O sexo informado é inválido");
+            }
+            }
+            menu();
+            //Método da professora:
+            /*function menu(){
+                var sexo = parseInt(prompt("Informe o sexo: \n 1- Homem \n 2-Mulher \n 3- Não definido \n 4- Outro"))
+                return sexo;
+            }
+            var sexy = menu();
+            switch(sexy){
+                case 1:
+                    document.write("Opção escolhida foi sexo: masculino!");
+                    break;
+
+                case 2:
+                    document.write("Opção escolhida foi sexo: feminino!");
+                    break;
+
+                default:
+                document.write("O sexo informado é:  inválido");
+            }*/
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

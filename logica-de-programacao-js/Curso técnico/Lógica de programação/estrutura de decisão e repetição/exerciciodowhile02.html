@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let numero
+        let resposta
+        do{
+            numero = parseFloat(prompt("Digite a seguir um número:"));
+            if(numero % 2 == 0){
+                document.write(`O número: ${numero} é par! <br>`)
+            } else {
+                document.write(`O número: ${numero} é ímpar! <br>`);
+            }
+            resposta = prompt("Deseja parar? S ou N ");
+        }while(resposta === "N" || resposta === "n");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

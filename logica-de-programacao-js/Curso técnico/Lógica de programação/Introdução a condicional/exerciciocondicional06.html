@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*1. A escola Lemos Segundo resolveu criar um programa para ajudar os professores nos conceitos dos estudantes. O(a)
+professor(a) irá digitar a nota tirada pelo aluno. Caso seja menor do que 0 ou maior do que 10, o programa irá escrever
+“Nota Inválida”; se for maior ou igual a 0 e menor do que 4, o programa irá escrever, “aluno reprovado”. Se a nota for maior
+ou igual a 4 e menor do que 7, o programa irá escrever “Aluno em Recuperação” e, caso seja maior ou igual a 7 e menor ou
+igual a 10, escreverá “Aluno Aprovado”.*/
+        /*2. A escola Lemos Segundo gostou do sistema que você desenvolveu e, com isso, pediu um “upgrade”. Aproveitando o código
+do exercício anterior, eles solicitaram que, no caso de o estudante ficar em recuperação, o programa deverá solicitar a
+digitação de mais uma nota. Se essa nota for menor que 5, o programa escreverá “Reprovado na Recuperação” e, caso
+contrário, “Aprovado na Recuperação”.
+Ao concluir as atividades, o docente realizará a correção, principalmente dando ênfase nas dificuldades dos alunos. Após a
+explicação de uma linha de código, o instrutor deverá perguntar aos alunos qual seria o próximo passo para continuidade da
+tarefa.*/
+        let nome = prompt("Olá seja muito bem-vindo a escola Lemos segundo, Digite no campo abaixo o nome do aluno:");
+        let nota = parseFloat(prompt("No campo abaixo, digite a nota do aluno: "));
+        if(nota > 10 || nota < 0){
+            document.write("Nota inválida, Insira novamente os dados precisamente");
+        } else if(nota >= 0 && nota < 4){
+            document.write("O aluno: ", nome ," está reprovado");
+        } else if (nota >= 4 && nota < 7){
+            document.write("O aluno: ", nome ," está em recuperação <br>");
+            let nota_recuperacao = parseFloat(prompt("Digite a nota estabelecida na recuperação: "));
+            if(nota_recuperacao <= 5){
+                document.write(" O aluno: ", nome , " foi reprovado na recuperação com a nota <br> " , nota_recuperacao);
+            } else {
+                document.write("O aluno: " , nome , " foi aprovado na recuperação com a nota: <br> " , nota_recuperacao);
+            }
+        } else {
+            document.write("O aluno: " , nome , " foi aprovado com a nota: " , nota);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

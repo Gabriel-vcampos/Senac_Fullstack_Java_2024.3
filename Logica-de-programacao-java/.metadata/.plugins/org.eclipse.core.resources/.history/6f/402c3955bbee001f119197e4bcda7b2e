@@ -1,0 +1,27 @@
+package aula03;
+
+import java.util.Scanner;
+
+public class numerospares {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Digite um número a seguir:");
+		int numero_usuario = scanner.nextLine();
+		int contador = 0;
+		
+		while(contador <= numero_usuario) {
+			contador++;
+			if(contador % 2 = 0) {
+				System.out.print("O número: " + contador + "é par!");
+			break;
+			
+			
+		}
+		
+		
+
+	}
+
+}

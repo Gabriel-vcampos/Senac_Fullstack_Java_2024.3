@@ -1,0 +1,14 @@
+package aula03;
+import java.util.Scanner;
+
+public class whileexercicio {
+
+	public static void main(String[] args) {
+		int contador = 1;
+		while(contador <= 5) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Qual o seu nome?")
+		}
+		scanner.close();
+}
+}

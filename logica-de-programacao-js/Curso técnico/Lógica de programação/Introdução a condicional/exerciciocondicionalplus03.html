@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*3. As	maçãs	 custam	 R$	 0,30	 cada	 se	 forem	 compradas	menos	 do	 que	 uma	
+dúzia,	 e	 R$	 0,25	 se	 forem	 compradas	 pelo	 menos	 doze.	 Escreva	 um	
+programa	 que	 leia	 o	 número	 de	 maçãs	 compradas,	 calcule	 e	 escreva	 o	
+valor	total	da	compra.*/
+
+        let quantidade_de_frutas = parseInt(prompt("Digite no campo abaixo a quantidade de maçãs que você quer comprar: "));
+        let preco_frutas = 0.30
+        let preco_total = preco_frutas * quantidade_de_frutas
+        if (quantidade_de_frutas < 12){
+            document.write("A quantidade total que você tem a pagar é:" , preco_total , "R$");
+        } else {
+            preco_frutas = 0.25
+            let preco_total = preco_frutas * quantidade_de_frutas
+            document.write("A quantidade total que você tem a pagar é: " , preco_total , "R$");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

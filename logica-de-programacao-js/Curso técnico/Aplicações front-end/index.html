@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="personagens-list"></div>
+
+   
+  
+  </body>
+<script>
+
+fetch('http://localhost:3000/personagens/').then( response =>{
+  if(!response.ok){
+    throw new Error('Ocorreu um erro durante a requisição');
+  }else {
+    return response.json();
+  }
+}
+
+).then(data =>{
+  const personagensList = document.getElementById("personagens-list");
+  
+  data.forEach(personagens =>{
+    const personagensListElement = document.createElement('li');
+    personagensListElement.innerHTML = `<strong> Name:</strong> ${personagens.name} <strong> QI:</strong>${personagens.QI} <strong> Age: ${personagens.age} </strong> <strong> Gun: ${personagens.gun} </strong>`
+   personagensList.appendChild(personagensListElement);
+  }
+  )
+
+}
+)
+  
+</script>
+</html>

@@ -1,0 +1,12 @@
+package aula03;
+
+public class numerospares {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String contador = scanner.nextLine();
+		
+
+	}
+
+}

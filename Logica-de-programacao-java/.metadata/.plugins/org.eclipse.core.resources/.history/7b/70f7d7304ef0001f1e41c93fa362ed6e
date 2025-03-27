@@ -1,0 +1,12 @@
+package aula04;
+
+public class Casa {
+	String rua;
+	float numero_da_casa;
+	String cor_da_casa;
+	public Casa(String rua, float numero_da_casa , String cor_da_casa) {
+		this.rua = rua;
+		this.numero_da_casa = numero_da_casa;
+		this.cor_da_casa = cor_da_casa;
+	}
+}

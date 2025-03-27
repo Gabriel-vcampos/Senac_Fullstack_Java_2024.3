@@ -1,0 +1,13 @@
+package aula02;
+import javax.swing.JOptionPane;
+public class JoptionPane {
+
+	public static void main(String[] args) {
+		
+		String valor = JOptionPane.showInputDialog("Digite algum valor aleatório:");
+		double valorconvertido = Double.parseDouble(valor)
+		
+
+	}
+
+}

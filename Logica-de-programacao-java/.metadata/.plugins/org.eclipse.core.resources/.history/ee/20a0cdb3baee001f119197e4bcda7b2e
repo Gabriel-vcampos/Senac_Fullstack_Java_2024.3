@@ -1,0 +1,22 @@
+package aula03;
+
+import java.util.Scanner;
+
+public class numerospares {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		String numero_usuario = scanner.nextLine();
+		int contador = 0;
+		
+		while(contador >= numero_usuario) {
+			
+			
+		}
+		
+		
+
+	}
+
+}

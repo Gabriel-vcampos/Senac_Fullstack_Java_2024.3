@@ -1,0 +1,16 @@
+package aula015;
+import java.util.Scanner;
+
+public class InssExercicio {
+
+	public static void main(String[] args) {
+		        Scanner scanner = new Scanner(System.in);
+		        System.out.print("Digite o seu salário:");
+		        float salario = scanner.nextFloat();
+		        float desconto = salario * 0.11;
+		        float salario_bruto = salario - desconto;
+		        System.out.print("O seu salário bruto é: " + salario_bruto);
+		    
+	}
+
+}

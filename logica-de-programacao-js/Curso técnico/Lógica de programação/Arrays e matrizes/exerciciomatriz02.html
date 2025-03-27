@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var idade = [[2], [2]];
+    for(var linha=0; linha<2;linha++){
+        for(var coluna=0;coluna<2;coluna++){
+            idade[linha][coluna] = parseInt(prompt("Informe a idade"));
+        }
+    }
+    for(var linha=0; linha<2;linha++){
+        for(var coluna=0;coluna<2;coluna++){
+      document.write(idade[linha][coluna]+ " ") 
+        }
+        document.write("<br>");
+    }
+    let soma = idade[0 , 0] + idade [0 , 1] + idade [1 , 0] + idade [1 , 0];
+    document.write("A soma dos valores:" , idade[0 , 0] , idade[0 , 1] , idade[1 , 0] , idade[1 , 1] , " é:" , soma);
+      
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
