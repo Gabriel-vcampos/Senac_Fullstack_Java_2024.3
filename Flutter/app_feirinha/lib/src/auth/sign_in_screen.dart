@@ -1,13 +1,52 @@
+import 'dart:convert';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:app_feirinha/src/auth/components/custom_text.dart';
+import 'package:app_feirinha/src/auth/sign_up_screen.dart';
+import 'package:app_feirinha/src/home/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
-class SignInScreen extends StatelessWidget {
+class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
 
+  @override
+  State<SignInScreen> createState() => _SignInScreenState();
+}
+
+class _SignInScreenState extends State<SignInScreen> {
+  //função para realizar o login
+  Future<void> loginUser(String email, String password) async{
+    final url = Uri.parse('http://localhost:8080/user/login');
+    try{
+      final response = await http.post(
+        url,
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode({'email': email, 'senha': password}),
+        );
+        if (response.statusCode == 200) {
+         Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
+         );
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Erro no login: ${response.body}'),)
+          );
+        }
+
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Erro ao conectar á API: ${e}'),)
+          );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
+    //definição dos campos para usuário e senha
+    TextEditingController emailController = TextEditingController();
+    TextEditingController passwordController = TextEditingController();
     return Scaffold(
       backgroundColor: Colors.green,
       body: Column(
@@ -85,12 +124,14 @@ class SignInScreen extends StatelessWidget {
                 CustomTextField(
                   icon: Icons.email,
                   label: 'Email',
+                  controller: emailController,
                 ),
                 //senha
                 CustomTextField(
                   icon: Icons.lock,
                   label: 'Senha',
                   isObscure: true,
+                  controller: passwordController,
                 ),
                 //botão entrar
                 SizedBox(
@@ -104,7 +145,13 @@ class SignInScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(18),
                       )
                     ),
-                    onPressed: () {}, 
+                    onPressed: () {
+                      //--- mudei aqui
+                      String email = emailController.text;
+                      String password = passwordController.text;
+                      loginUser(email, password);
+                      //--------
+                    }, 
                   child: Text('Entrar',
                   style: TextStyle(fontSize: 18,),),),
                 ),
@@ -124,7 +171,13 @@ class SignInScreen extends StatelessWidget {
                 SizedBox(
                   height: 50,
                   width: 600,
-                  child: OutlinedButton(onPressed: () {},
+                  child: OutlinedButton(onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignUpScreen(),
+                      )
+                      );
+                  },
                   //formatação do botão
                   style: OutlinedButton.styleFrom(
                     shape: RoundedRectangleBorder(

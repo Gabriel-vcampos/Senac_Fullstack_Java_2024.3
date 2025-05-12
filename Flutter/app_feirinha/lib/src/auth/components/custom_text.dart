@@ -6,7 +6,15 @@ class CustomTextField extends StatefulWidget {
   final String label;
   final bool isObscure;
 
-  const CustomTextField({super.key, required this.icon, required this.label, this.isObscure = false});
+
+  // criando nosso controller
+  final TextEditingController? controller;
+
+  const CustomTextField({super.key, 
+                        required this.icon, 
+                        required this.label, 
+                        this.isObscure = false,
+                        this.controller});
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -23,6 +31,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15.0),
       child: TextFormField(
+                      controller: widget.controller,
                       obscureText: isSecret,
                       decoration: InputDecoration(
                         // passando dados do ícone e label e exibição

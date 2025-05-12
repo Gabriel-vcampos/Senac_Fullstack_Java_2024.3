@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.flutter.crud.entities.User;
 import com.flutter.crud.repositories.UserRepository;
 
-@CrossOrigin(origins = "http://localhost:8000")
+@CrossOrigin(origins = "*")
 //Acima, Substitua pela porta onde o Flutter está rodando
 @RestController
 @RequestMapping("/user")
@@ -43,4 +43,17 @@ public class UserController {
 			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password");
 		}
 	}
+	
+	@PostMapping("/register")
+	public ResponseEntity<String> registerUser(@RequestBody User user) {
+		// Verificar se o usuário já existe
+			User existingUser = repositorio.findByEmail(user.getEmail());
+			if (existingUser != null) {
+				return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuário já existe.");
+			}
+			// Salvar o novo usuário no banco de dados
+			repositorio.save(user);
+			return ResponseEntity.status(HttpStatus.CREATED).body("Usuário registrado com sucesso.");
+	}
 }
+
