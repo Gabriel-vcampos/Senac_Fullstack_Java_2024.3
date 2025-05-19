@@ -1136,3 +1136,24 @@ org.apache.maven.settings.building.SettingsBuildingException: 1 problem was enco
 2025-05-12 11:28:55,416 [Worker-196: Launching crud - CrudApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2025-05-12 11:28:55,444 [Worker-196: Launching crud - CrudApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-05-12 11:28:55,448 [Worker-196: Launching crud - CrudApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\169133232024.3\Documents\Senac_Fullstack_Java_2024.3\crud-elias\crud\src\test\resources
+2025-05-14 09:32:52,372 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-05-14 09:32:55,116 [Worker-3: Repository registry initialization] ERROR o.e.m.c.internal.embedder.MavenImpl - Could not read settingsCacheMap.xml, assuming default values
+org.apache.maven.settings.building.SettingsBuildingException: 1 problem was encountered while building the effective settings
+[FATAL] Non-parseable settings C:\Users\169133232024.3\.m2\settings.xml: expected = after attribute name (position: START_DOCUMENT seen ...ns="http://maven.apache.org/SETTINGS/1.0.0&quot; xmlns:xsi="http:/... @1:80)  @ C:\Users\169133232024.3\.m2\settings.xml, line 1, column 80
+
+	at org.apache.maven.settings.building.DefaultSettingsBuilder.build(DefaultSettingsBuilder.java:115)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$MavenSettings.getSettings(MavenImpl.java:1117)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getSettings(MavenImpl.java:279)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getSettings(MavenImpl.java:273)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistry.updateRegistry(RepositoryRegistry.java:229)
+	at org.eclipse.m2e.core.internal.repository.RepositoryRegistryUpdateJob.run(RepositoryRegistryUpdateJob.java:50)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-05-14 09:50:44,129 [Worker-161: Launching crud - CrudApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-05-14 09:50:44,144 [Worker-161: Launching crud - CrudApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-05-14 09:50:44,150 [Worker-161: Launching crud - CrudApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\169133232024.3\Documents\Senac_Fullstack_Java_2024.3\crud-elias\crud\src\test\resources
+2025-05-14 09:54:38,389 [Worker-156: Launching crud - CrudApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-05-14 09:54:38,395 [Worker-156: Launching crud - CrudApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-05-14 09:54:38,399 [Worker-156: Launching crud - CrudApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\169133232024.3\Documents\Senac_Fullstack_Java_2024.3\crud-elias\crud\src\test\resources
+2025-05-14 10:58:13,051 [Worker-195: Launching crud - CrudApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-05-14 10:58:13,063 [Worker-195: Launching crud - CrudApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2025-05-14 10:58:13,073 [Worker-195: Launching crud - CrudApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\169133232024.3\Documents\Senac_Fullstack_Java_2024.3\crud-elias\crud\src\test\resources
